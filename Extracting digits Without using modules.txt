@@ -13,7 +13,7 @@ void extractDigits(unsigned int num)
     //extract and print each digits
     len= strlen(temp);
     for(i=0; i<len; i++)
-        printf("%c",temp[i]);
+        printf("%c\n",temp[i]);
     
     printf("\n");
 }
