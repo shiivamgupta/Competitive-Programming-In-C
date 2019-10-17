@@ -1,0 +1,23 @@
+For example: 
+if there is a variable to store product weight, variable identifier/variable name should 
+be: product_weight, productWeight, product_Weight
+sscanf("%[^\n]s",product_name);
+
+#include <stdio.h>
+
+int main()
+{
+	char product_name[100]={0};
+	float product_weight;
+	
+	printf("Enter product name: ");
+	scanf("%[^\n]s",product_name);
+
+	printf("Enter product weight: ");
+	scanf("%f",&product_weight);	
+	
+	printf("Product details:\n");
+	printf("Name: %s\nWeight: %.02f\n",product_name,product_weight);
+	
+	return 0;
+}
