@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+
+void extractDigits(unsigned int num)
+{
+    int i,len;
+    //char pointer declaration
+    char temp[5];
+    //assig number as string in char pointer
+    sprintf((char*)temp,"%u",num);
+    
+    //extract and print each digits
+    len= strlen(temp);
+    for(i=0; i<len; i++)
+        printf("%c",temp[i]);
+    
+    printf("\n");
+}
+
+//main program 
+int main()
+{
+    unsigned int number=12345;
+    //function calling
+    extractDigits(number);
+    return 0;
+}
+
+---------------------------------------------------------
+/*
+void extractDigits(unsigned int num)
+{
+    int i,dig;
+    while(num>0)
+    {
+        dig = num%10;
+        printf("%d",dig);
+        num = num/10;
+    }
+}
+*/
