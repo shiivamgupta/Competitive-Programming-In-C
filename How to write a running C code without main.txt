@@ -1,0 +1,47 @@
+
+1.
+#include<stdio.h> 
+#define fun main 
+int fun(void) 
+{ 
+    printf("Geeksforgeeks"); 
+    return 0; 
+}
+
+2.
+#include<stdio.h> 
+#define fun m##a##i##n 
+int fun() 
+{ 
+    printf("Geeksforgeeks"); 
+    return 0; 
+}
+
+3.
+#include<stdio.h> 
+#define begin(m,a,i,n) m##a##i##n 
+#define start begin(m,a,i,n) 
+  
+void start() { 
+   printf("Geeksforgeeks"); 
+} 
+
+4.
+#include<stdio.h> 
+#include<stdlib.h> 
+  
+// entry point function 
+int nomain();  
+  
+void _start(){ 
+  
+    // calling entry point 
+    nomain();  
+    exit(0); 
+} 
+  
+int nomain() 
+{ 
+    puts("Geeksforgeeks"); 
+    return 0; 
+} 
