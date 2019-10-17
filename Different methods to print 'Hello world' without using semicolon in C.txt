@@ -1,0 +1,45 @@
+1) Using if statement
+
+#include<stdio.h>
+int main()
+{
+	if(printf("Hello World"))
+	{;}
+	
+	return 0;
+}
+
+2) Using loop statement
+
+#include<stdio.h>
+int main()
+{
+	while(!printf("Hello World"))
+	{;}
+	
+	return 0;
+}
+
+3) Using switch statement
+
+#include<stdio.h>
+int main()
+{
+	switch(printf("Hello World"))
+	{
+	}
+	
+	return 0;
+}
+
+4) Using Macro Definition
+
+#include<stdio.h>
+
+#define a printf("Hello World")
+
+int main()
+{
+    if(a){;}
+	return 0;
+}
