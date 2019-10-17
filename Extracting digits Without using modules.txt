@@ -1,5 +1,10 @@
 Note:- Using sprintf
+Steps:
 
+    Declare a character array.
+    Assign number as string using sprintf() function in character array.
+    Extract the digits now by using simple loop from 0 to string length -1.
+    Print the each digit.
 
 #include <stdio.h>
 #include <string.h>
