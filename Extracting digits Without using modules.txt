@@ -1,7 +1,8 @@
+Note:- Using sprintf
+
+
 #include <stdio.h>
 #include <string.h>
-
-
 void extractDigits(unsigned int num)
 {
     int i,len;
