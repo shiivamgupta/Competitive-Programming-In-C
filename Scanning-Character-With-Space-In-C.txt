@@ -1,0 +1,54 @@
+Note:- If you find any buffer error, you can add __fpurge(stdin); before scan function.
+you`ve to add relative directory #include <stdio_ext.h> for fpurge function.
+Hope it helps.
+
+Method 1 : Using gets
+
+Syntax : char *gets(char *str)
+
+#include <stdio.h> 
+int main() 
+{ 
+   char str[20]; 
+   gets(str); 
+   printf("%s", str); 
+   return 0; 
+} 
+Note : gets() has been removed from c11. So it might give you a warning when implemented.
+We see here that it doesn’t bothers about size of array. So, there is chance of Buffer Overflow.
+
+----------------------------------------------------------------------------------------------------------- 
+
+Method 2 : To overcome above limitation, we can use fgets as :
+
+Syntax : char *fgets(char *str, int size, FILE *stream)
+
+Example : fgets(str, 20, stdin); as here, 20 is MAX_LIMIT according to declaration.
+
+#include <stdio.h> 
+#define MAX_LIMIT 20 
+int main() 
+{ 
+   char str[MAX_LIMIT]; 
+   fgets(str, MAX_LIMIT, stdin); 
+   printf("%s", str); 
+  
+   return 0; 
+} 
+
+---------------------------------------------------------------------------------------------------------
+
+Method 3 : Using %[^\n]%*c inside scanf
+
+Example : scanf(“%[^\n]%*c”, str);
+
+#include <stdio.h> 
+int main() 
+{ 
+   char str[20]; 
+   scanf("%[^\n]%*c", str); 
+   printf("%s", str); 
+  
+   return 0; 
+} 
+-----------------------------------------------------------------------------------------------------------
