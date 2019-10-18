@@ -1,0 +1,28 @@
+Following Functions are included in the header file #include<string.h>
+---------------------------------------------------------------------------------------------
+
+1) char*strcat(s,t)---->This function will concetenate the the 't' string with 's'...String 't' will remian as it is.But 's' will be the combination of both string terminated with null character.'s' will be appened from the null character of 's' string.Null character of of's' string will be overwritten. It will return the character pointer pointing to the first character of the 's' string which is concetenated string.
+Note:Before appending the string one must ensure that their must be enough space in array of string 's' for string 't'.
+
+2) char* strncat(s,t,n)-->Same as above but only first n character from string 't' will be appended to string 's'.
+
+3) int strcmp(s,t)---> The strcmp() compares two strings character by character.
+If the first character of two strings is equal, the next character of two strings are compared. This continues until the corresponding characters of two strings are different or a null character '\0' is reached.
+Note:Asci value of the characters  will be comapred!
+
+0--> 	if both strings are identical (equal)
+negative--> 	if the ASCII value of the first unmatched character is less than second.
+positive integer--> 	if the ASCII value of the first unmatched character is greater than second.
+
+4)int strcmp(s,t)-->Same as above...But it will compare only first n character of the string.
+
+5) char* strcpy(char* destination, const char* source)--->The strcpy() function copies the string pointed by source (including the null character) to the character array destination.Entire string 'source' will be copied to string 'destination' along with null character...So previous string in destination will be overwritten.Even if the destination string is greater than source string...All the character after the NULL character of the source will be ignored. 
+The function also returns the copied array.
+
+6)strncpy(s,t)-->It will copy first n character from  t to s.
+
+7)strlen(s)--->It reurns the length of the string excluding null character.
+
+8)strchr(s,c)--->It will return the address of where the the character 'c' has occured.NUll if not present.
+
+9) strrchr(s,c)-->It will return the address where the character 'c' has occured last.NULL if not present.
