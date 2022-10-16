@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+    int arr1[26]={0},arr2[26]={0},g=0;
+    char *str1,*str2;
+    str1=(char*)malloc(50);
+	str2=(char*)malloc(50);
+    printf("enter the string1");
+    scanf("%s",str1);
+    printf("enter the string2");
+    scanf("%s",str2);
+    if(strlen(str1)!=strlen(str2))
+    {
+        printf("not anagram");
+        return 0;
+    }
+    for(int i=0;i<strlen(str1);i++)
+    {
+        arr1[str1[i]-'a']++;
+    }
+    for(int i=0;i<strlen(str2);i++)
+    {
+        arr1[str2[i]-'a']++;
+    }
+    for(int i=0;i<26;i++)
+    {
+        if(arr1[i]=arr2[i])
+        {
+            g=0;
+        }
+        else
+        {
+            g=1;
+            break;
+        }
+    }
+    if(g==1)
+    printf("anagram");
+    else
+    printf("no anagram");
+}

@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    float f;
+    scanf("%f",&f);
+    int n=f,temp;
+    int p=(f-n)*1000000;
+    int q=p%1000000;
+    for(long i=1;i<=q;i++)
+    {
+        if(q%i==0 && 1000000%i==0)
+        temp=i;
+    }
+    
+    printf("%d %d/%d",n,(q/temp),(1000000/temp));
+}
