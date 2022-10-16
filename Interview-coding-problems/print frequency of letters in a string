@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[26]={0};
+    char str[20];
+    printf("enter the string");
+    scanf("%s",str);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        arr[str[i]-'a']++;
+    }
+    for(int i=0;i<26;i++)
+    {
+    if(arr[i]!=0)    
+    printf("%c %d\n",'a'+i,arr[i]);
+    }
+    return 0;
+}

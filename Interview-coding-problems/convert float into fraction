@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	float x,y;
+	int a,b,f=1000000;
+	printf("enter the number");
+	scanf("%d",&x);
+	
+	a=x;
+	y=x-(float)a;
+	y=y*f;
+	b=gcd(y,f);
+	y=y/b;
+	f=f/b;
+	printf("%d %d/%d",a,y,f);
+	return 0;
+}
+
+gcd(int x, int y){
+    if(y!=0)
+    return gcd(y,x%y);
+    else
+    return x;
+}

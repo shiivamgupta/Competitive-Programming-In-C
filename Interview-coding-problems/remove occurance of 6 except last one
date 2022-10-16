@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int a[9]={3,5,46,56,336,43,98,6,45},b[8]={0},i,j;
+    for(i=8;i>=0;i--)
+    {
+        if(a[i]%10==6);
+        break;
+    }
+    int count=i-1;
+    for(i=0,j=0;i<count;i++)
+    {
+        if(a[i]%10==6)
+        {
+            continue;
+        }
+        else
+        b[j]=a[i];
+        j++;
+    }
+    for(i=count;i<9;i++)
+    b[j++]=a[i];
+    
+    for(i=0;i<j;i++)
+    printf("%d ",b[i]);
+}
