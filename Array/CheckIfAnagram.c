@@ -5,7 +5,7 @@
             Program to check if two strings are anagram or not using hashing
             TC - O(n)
 ***************************************************************************************************************/
-
+//event 2022
 void IsAnagram(char *str1, char *str2)
 {
     int i;
